@@ -1,4 +1,5 @@
 from gameboard import Gameboard
+from enum import Enum
 
 
 class Player:
@@ -7,6 +8,10 @@ class Player:
         self.gameboard = Gameboard()
         self.total_hitpoints:int = 0
 
+    def choose_y_coordinate(self):
+        Y_coord = input("Choose a letter between A_J:")
+        print(Y_Axis[Y_coord.upper()])
+    
     def place_ships(self):
         pass
 
