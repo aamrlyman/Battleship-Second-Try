@@ -10,7 +10,7 @@ class Player:
 
     def choose_y_coordinate(self):
         Y_coord = input("Choose a letter between A_J:")
-        print(Y_Axis[Y_coord.upper()])
+        print(Y[Y_coord.upper()])
     
     def place_ships(self):
         pass
