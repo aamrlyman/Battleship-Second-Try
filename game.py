@@ -1,9 +1,11 @@
+from telnetlib import GA
 from player import Player
-
+from gameboard import Gameboard
 class Game: 
     def __init__(self) -> None:
-        self.players:list[object] = [Player(), Player()]
-
+        self.gameboard = Gameboard()
+        self.players:list[Player] = [Player(Gameboard()), Player(Gameboard())]
+        
 
     def game_intro(self):
         pass

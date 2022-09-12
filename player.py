@@ -3,9 +3,9 @@ from enum import Enum
 
 
 class Player:
-    def __init__(self) -> None:
+    def __init__(self, gameboard: Gameboard) -> None:
         self.name = input("Type your name here: ")
-        self.gameboard = Gameboard()
+        self.gameboard = gameboard
         self.total_hitpoints:int = 0
 
     def choose_y_coordinate(self):

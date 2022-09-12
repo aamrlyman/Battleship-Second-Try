@@ -14,11 +14,7 @@ class Y(Enum): #Y axis enum class
     I = 9
     J = 10
 
-class ship_names(Enum):
-    Destroyer = 1
-    Submarine = 2
-    Battleship = 3
-    Aircraft_Carrier = 4
+
 
 class Gameboard: 
     def __init__(self) -> None:
@@ -32,17 +28,17 @@ class Gameboard:
             [C({Y.G:1}), C({Y.G:2}),C({Y.G:3}), C({Y.G:4}), C({Y.G:5}), C({Y.G:6}), C({Y.G:7}), C({Y.G:8}), C({Y.G:9}), C({Y.G:10})], 
             [C({Y.H:1}), C({Y.H:2}),C({Y.H:3}), C({Y.H:4}), C({Y.H:5}), C({Y.H:6}), C({Y.H:7}), C({Y.H:8}), C({Y.H:9}), C({Y.H:10})], 
             [C({Y.I:1}), C({Y.I:2}),C({Y.I:3}), C({Y.I:4}), C({Y.I:5}), C({Y.I:6}), C({Y.I:7}), C({Y.I:8}), C({Y.I:9}), C({Y.I:10})], 
-            [C({Y.J:1}), C({Y.J:2}),C({Y.J:3}), C({Y.J:4}), C({Y.J:5}), C({Y.J:6}), C({Y.J:7}), C({Y.J:8}), C({Y.J:9}), C({Y.J:10})], 
-         
+            [C({Y.J:1}), C({Y.J:2}),C({Y.J:3}), C({Y.J:4}), C({Y.J:5}), C({Y.J:6}), C({Y.J:7}), C({Y.J:8}), C({Y.J:9}), C({Y.J:10})],  
         ] 
-            
+        
+        self.ship_names:list[str] = ['Destroyer', 'Submarine', 'Battleship', 'Aircraft_Carrier']
 
-        self.fleet = [
-            Ship(ship_names.Aircraft_Carrier, 5), 
-            Ship(ship_names.Battleship, 4), 
-            Ship(ship_names.Submarine, 3),
-            Ship(ship_names.Destroyer, 2)
-             ]
+        self.fleet:list[Ship] = [
+            Ship(self.ship_names[3], 5), 
+            Ship(self.ship_names[2], 4), 
+            Ship(self.ship_names[1], 3), 
+            Ship(self.ship_names[0], 2), 
+        ]
 
         self.Attacked_coordinates: list[object] = []
         

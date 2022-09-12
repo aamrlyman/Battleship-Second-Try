@@ -7,7 +7,7 @@ class Status(Enum):
     miss = 3
     hit = 5
 
-class C: #coordinate class
+class Square: #coordinate class
     def __init__(self, coordinate: object) -> None:
         self.coordinate = coordinate
         self.status = Status.blank
